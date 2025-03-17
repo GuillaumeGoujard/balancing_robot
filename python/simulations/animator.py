@@ -3,11 +3,13 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import numpy as np
 
-def animate_pendulum(csv_file, max_time=None):
+def animate_pendulum(csv_file, max_time=None, frame_skip=20):
     data = pd.read_csv(csv_file)
 
     if max_time is not None:
         data = data[data["time"]<=max_time]
+
+    data = data.iloc[::frame_skip, :]
 
     t_values = data["time"].values
     x_c_values = data["x_c"].values

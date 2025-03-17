@@ -35,7 +35,6 @@ void Motor::Log_RotationalSpeed()
 
     Motor::encoder_count_left_a = 0;
 
-    // Serial.println(" RPM");
 }
 
 

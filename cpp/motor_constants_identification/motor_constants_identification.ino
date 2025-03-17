@@ -77,37 +77,3 @@ void startStepTest()
     }
 }
 
-// void setup() 
-// {
-//   Motor.Pin_init();
-//   Motor.Encoder_init();
-//   Timer2.init(100);
-//   Mpu6050.init();
-//   Serial.begin(9600);
-//   delay(100);
-
-//   Serial.println("Waiting for Python signal...");
-//   while (Serial.available() == 0) {
-//     // Wait until a signal is received from Python
-//   }
-  
-//   char received = Serial.read();
-//   if (received == '1') {
-//     Serial.println("Starting PWM ramp test...");
-//   }
-// }
-
-// void loop() 
-// {
-//   for (int pwm_value = 0; pwm_value <= 255; pwm_value += 10) {
-//     Motor.Forward(pwm_value);  // Set motor PWM
-//     delay(DELAY);  // 1s delay per step
-//   }
-
-//   Motor.Forward(254);
-//   delay(DELAY);
-//   Motor.Forward(255);
-//   delay(DELAY);
-//   Motor.Forward(0);
-//   while (1);  // Stop execution after full sweep
-// }
